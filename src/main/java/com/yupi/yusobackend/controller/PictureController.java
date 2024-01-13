@@ -11,6 +11,7 @@ import com.yupi.yusobackend.model.dto.post.PostQueryRequest;
 import com.yupi.yusobackend.model.entity.Picture;
 import com.yupi.yusobackend.model.entity.Post;
 import com.yupi.yusobackend.model.vo.PostVO;
+import com.yupi.yusobackend.service.PictureService;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -20,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -35,6 +37,9 @@ import java.util.Map;
 @RequestMapping("/picture")
 public class PictureController {
 
+    @Resource
+    private PictureService pictureService;
+
 
     /**
      * 分页获取列表（封装类）
@@ -44,26 +49,15 @@ public class PictureController {
      * @return
      */
     @PostMapping("/list/page/vo")
-    public BaseResponse<List<Picture>> listPictureVOByPage(@RequestBody PictureQueryRequest pictureQueryRequest,
-                                                       HttpServletRequest request) throws IOException {
-        int current = 1;
-        String url = String.format("https://www.bing.com/images/search?q=小黑子&form=HDRSC3&first=%s",current);
-        Document doc = Jsoup.connect(url).get();
-        Elements elements = doc.select(".iuscp.isv");
-        ArrayList<Picture> pictures = new ArrayList<>();
-        for (Element element : elements) {
-            // 取图片地址
-            String m = element.select(".iusc").get(0).attr("m");
-            Map<String,Object> map = JSONUtil.toBean(m,Map.class);
-            String murl = (String) map.get("murl");
-            // 取图片标题
-            String title = element.select(".inflnk").get(0).attr("aria-label");
-            Picture picture = new Picture();
-            picture.setTitle(title);
-            picture.setUrl(murl);
-            pictures.add(picture);
-        }
-        return ResultUtils.success(pictures);
+    public BaseResponse<Page<Picture>> listPictureVOByPage(@RequestBody PictureQueryRequest pictureQueryRequest,
+                                                           HttpServletRequest request) throws IOException {
+
+        long size = pictureQueryRequest.getPageSize();
+        // 限制爬虫
+        ThrowUtils.throwIf(size > 20, ErrorCode.PARAMS_ERROR);
+        Page<Picture> picturePage = pictureService.searchPicture(pictureQueryRequest);
+
+        return ResultUtils.success(picturePage);
     }
 
 

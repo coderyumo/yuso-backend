@@ -1,6 +1,7 @@
 package com.yupi.yusobackend.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.yupi.yusobackend.model.dto.user.UserQueryRequest;
 import com.yupi.yusobackend.model.entity.User;
@@ -117,5 +118,7 @@ public interface UserService extends IService<User> {
      * @return
      */
     QueryWrapper<User> getQueryWrapper(UserQueryRequest userQueryRequest);
+
+    Page<UserVO> listUserVOByPage(UserQueryRequest userQueryRequest);
 
 }
