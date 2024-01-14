@@ -8,7 +8,7 @@ import com.yupi.yusobackend.model.entity.User;
  * 帖子点赞服务
  *
  * @author yumo
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ *  
  */
 public interface PostThumbService extends IService<PostThumb> {
 

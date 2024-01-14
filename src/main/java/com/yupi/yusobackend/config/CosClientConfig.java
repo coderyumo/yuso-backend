@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
  * 腾讯云对象存储客户端
  *
  * @author yumo
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ *  
  */
 @Configuration
 @ConfigurationProperties(prefix = "cos.client")

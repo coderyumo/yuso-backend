@@ -13,16 +13,17 @@ import com.yupi.yusobackend.model.entity.PostFavour;
 import com.yupi.yusobackend.model.entity.User;
 import com.yupi.yusobackend.service.PostFavourService;
 import com.yupi.yusobackend.service.PostService;
-import javax.annotation.Resource;
 import org.springframework.aop.framework.AopContext;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import javax.annotation.Resource;
 
 /**
  * 帖子收藏服务实现
  *
  * @author yumo
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ *  
  */
 @Service
 public class PostFavourServiceImpl extends ServiceImpl<PostFavourMapper, PostFavour>

@@ -46,7 +46,7 @@ import static com.yupi.yusobackend.service.impl.UserServiceImpl.SALT;
  * 用户接口
  *
  * @author yumo
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ *  
  */
 @RestController
 @RequestMapping("/user")

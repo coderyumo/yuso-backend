@@ -13,7 +13,7 @@ import lombok.Data;
  * 用户
  *
  * @author yumo
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ *  
  */
 @TableName(value = "user")
 @Data

@@ -10,7 +10,7 @@ import lombok.EqualsAndHashCode;
  * 帖子收藏查询请求
  *
  * @author yumo
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ *  
  */
 @Data
 @EqualsAndHashCode(callSuper = true)

@@ -7,7 +7,7 @@ import lombok.Data;
  * 用户更新个人信息请求
  *
  * @author yumo
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ *  
  */
 @Data
 public class UserUpdateMyRequest implements Serializable {

@@ -15,7 +15,7 @@ import org.springframework.boot.CommandLineRunner;
  * 全量同步帖子到 es
  *
  * @author yumo
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ *  
  */
 // todo 取消注释开启任务
 //@Component

@@ -4,7 +4,7 @@ package com.yupi.yusobackend.common;
  * 返回工具类
  *
  * @author yumo
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ *  
  */
 public class ResultUtils {
 

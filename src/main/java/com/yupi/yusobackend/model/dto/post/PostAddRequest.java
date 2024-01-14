@@ -2,13 +2,13 @@ package com.yupi.yusobackend.model.dto.post;
 
 import java.io.Serializable;
 import java.util.List;
+
 import lombok.Data;
 
 /**
  * 创建请求
  *
  * @author yumo
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
  */
 @Data
 public class PostAddRequest implements Serializable {

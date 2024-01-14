@@ -1,16 +1,17 @@
 package com.yupi.yusobackend.model.dto.post;
 
 import com.yupi.yusobackend.common.PageRequest;
-import java.io.Serializable;
-import java.util.List;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+
+import java.io.Serializable;
+import java.util.List;
 
 /**
  * 查询请求
  *
  * @author yumo
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ *  
  */
 @EqualsAndHashCode(callSuper = true)
 @Data

@@ -27,7 +27,7 @@ import org.springframework.web.multipart.MultipartFile;
  * 文件接口
  *
  * @author yumo
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ *  
  */
 @RestController
 @RequestMapping("/file")

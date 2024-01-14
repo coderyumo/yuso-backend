@@ -6,7 +6,7 @@ import com.yupi.yusobackend.common.ErrorCode;
  * 抛异常工具类
  *
  * @author yumo
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ *  
  */
 public class ThrowUtils {
 

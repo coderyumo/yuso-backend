@@ -12,7 +12,7 @@ import com.yupi.yusobackend.model.entity.User;
  * 帖子收藏服务
  *
  * @author yumo
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ *  
  */
 public interface PostFavourService extends IService<PostFavour> {
 

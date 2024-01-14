@@ -12,7 +12,7 @@ import org.springframework.beans.BeanUtils;
  * 帖子视图
  *
  * @author yumo
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ *  
  */
 @Data
 public class PostVO implements Serializable {
