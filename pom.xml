@@ -14,7 +14,7 @@
     <groupId>com.yupi</groupId>
     <artifactId>springboot-init</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-init</name>
+    <name>yuso-backend</name>
     <properties>
         <java.version>1.8</java.version>
     </properties>
