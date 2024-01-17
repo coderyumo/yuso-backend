@@ -29,6 +29,17 @@ spring:
     port: 6379
     timeout: 5000
     password: 123
+  rabbitmq:
+    host: 192.168.52.129
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+    listener:
+      simple:
+        acknowledge-mode: manual
+    publisher-confirm-type: correlated
+    publisher-returns: true
   # Elasticsearch 配置
   # todo 需替换配置，然后取消注释
   elasticsearch:

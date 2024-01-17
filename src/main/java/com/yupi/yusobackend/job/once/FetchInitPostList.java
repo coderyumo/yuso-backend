@@ -7,7 +7,6 @@ import cn.hutool.json.JSONUtil;
 import com.yupi.yusobackend.model.entity.Post;
 import com.yupi.yusobackend.service.PostService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
@@ -26,7 +25,7 @@ public class FetchInitPostList {
     @Resource
     private PostService postService;
 
-//    @Scheduled(cron = "0 26 21 * * ?")
+//    @Scheduled(cron = "0 26 23 * * ?")
     public void insertPostList(){
         String json = "{\n" +
                 "    \"current\": 1,\n" +

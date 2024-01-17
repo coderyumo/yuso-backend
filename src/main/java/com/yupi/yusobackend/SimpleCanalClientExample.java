@@ -10,6 +10,7 @@ import java.net.InetSocketAddress;
 import java.util.List;
 
 
+@Deprecated
 public class SimpleCanalClientExample {
 
 
